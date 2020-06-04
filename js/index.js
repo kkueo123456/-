@@ -28,7 +28,7 @@
     // 人数
     let firstMan=100
     let lastMan=167322
-    let ManTime=parseInt(lastMan/50)
+    let ManTime=parseInt(lastMan/60)
     var manTimer=setInterval(function(){
         firstMan=firstMan+ManTime
         if(firstMan>=lastMan){
@@ -40,14 +40,14 @@
     //金额 
     let moneyNum = 500
     let moneyFinalNum=8625736
-    let moneyTime=parseInt(moneyFinalNum/50)
+    let moneyTime=parseInt(moneyFinalNum/60)
     var timer = setInterval(function () {
           moneyNum=moneyNum+moneyTime
           if(moneyNum>=moneyFinalNum){
               moneyNum=moneyFinalNum
               clearInterval(timer)
           }
-          $('.app-Right-Top .num').html(moneyNum+'￥')
+          $('.app-Right-Top .num').html(moneyNum+'元')
     }, 50)
     //直播蒙版
     $('.douyin-women ul li').hover(function () {

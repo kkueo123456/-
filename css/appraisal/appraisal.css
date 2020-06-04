@@ -5,6 +5,9 @@
   .appr-show .appr-show-container-Top p {
     font-size: 13px;
   }
+  .appr-bottom-left-top h3 {
+    font-size: 18px !important;
+  }
   .appr-person-bottom .appr-bottom-left-top p {
     font-size: 13px;
   }
@@ -14,6 +17,13 @@
   }
   .publicTit p {
     font-size: 12px;
+  }
+  .publicTit h3 {
+    font-size: 18px !important;
+  }
+  .appr-bottom-left-bottom .baozhang p {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .process-list ul li .list-text p {
     font-size: 13px;
@@ -91,20 +101,17 @@
   line-height: 30px;
 }
 .appr-bottom-left-bottom {
-  margin-top: 10px;
+  margin-top: 8%;
 }
 .appr-bottom-left-bottom-text {
   padding-top: 15px;
 }
 .baozhang p {
   font-weight: bold;
-}
-.baozhang {
-  margin-top: 10%;
+  margin-bottom: 0;
 }
 .process {
   padding-top: 5%;
-  padding-bottom: 5%;
 }
 .publicTit h3 {
   text-align: center;
