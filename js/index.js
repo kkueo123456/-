@@ -24,16 +24,48 @@
 
         }
     })
-    /*移动广告*/
-    $(".brandUl li").hover(function () {
-        $(this).find("img").animate({
-            "left": "-30px"
-        }, 200)
+    //数字增加动画
+    // 人数
+    let firstMan=100
+    let lastMan=167322
+    let ManTime=parseInt(lastMan/50)
+    var manTimer=setInterval(function(){
+        firstMan=firstMan+ManTime
+        if(firstMan>=lastMan){
+            firstMan=lastMan
+            clearInterval(manTimer)
+        }
+        $('.app-Right-Top .people').html(firstMan+'人')
+    },50)
+    //金额 
+    let moneyNum = 500
+    let moneyFinalNum=8625736
+    let moneyTime=parseInt(moneyFinalNum/50)
+    var timer = setInterval(function () {
+          moneyNum=moneyNum+moneyTime
+          if(moneyNum>=moneyFinalNum){
+              moneyNum=moneyFinalNum
+              clearInterval(timer)
+          }
+          $('.app-Right-Top .num').html(moneyNum+'￥')
+    }, 50)
+    //直播蒙版
+    $('.douyin-women ul li').hover(function () {
+        $(this).children(".mengban").css('display', 'block')
     }, function () {
-        $(this).find("img").animate({
-            "left": "0px"
-        }, 100)
+        $(this).children(".mengban").css('display', 'none')
+
     })
+    /*移动广告*/
+    // $(".brandUl li").hover(function () {
+    //     $(this).find("img").animate({
+    //         "left": "-10px"
+    //     }, 200)
+    // }, function () {
+    //     $(this).find("img").animate({
+    //         "left": "0px"
+    //     }, 100)
+    // })
     $(".footer").load('../footer.html')
     //划过蒙版
     $('.video-Left-img').mouseover(function () {

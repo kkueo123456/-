@@ -3,11 +3,15 @@
 
     },
     {
-        "img": "../img/index/banner_02.png"
+        "img": "../img/index/banner2.jpg"
 
     },
     {
-        "img": "../img/index/banner_02.png"
+        "img": "../img/index/banner3.jpg"
+
+    },
+    {
+        "img": "../img/index/banner4.jpg"
 
     }
 ]

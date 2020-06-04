@@ -22,6 +22,32 @@
   .brand-container ul li {
     margin-left: 0 !important;
   }
+  .video .douyin-right {
+    padding-top: 0;
+  }
+  .video-row .douyin-right .douyin-title h3,
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .video-row .douyin-women ul li h6 {
+    text-align: center;
+  }
+  .video-row .douyin-women ul li p {
+    font-size: 12px;
+  }
+  .tb-container .douyin-title h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .video-row .douyin-big {
+    width: 270px;
+  }
+  .video-row .douyin-big img {
+    width: 270px;
+  }
 }
 .wrap {
   overflow: hidden;
@@ -44,7 +70,7 @@
 }
 .swiper-banner .carousel-inner .carousel-item img {
   height: 100%;
-  max-height: 685px;
+  max-height: 605px;
 }
 .swiper-banner .carousel-control-prev-icon {
   width: 25px;
@@ -93,6 +119,7 @@
   height: 100%;
 }
 .appraisal-Right-Right {
+  padding-top: 15%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -184,59 +211,109 @@
   margin-bottom: 0;
 }
 .video-container {
-  padding-bottom: 5%;
+  background-color: #f5c7af;
 }
-.video-container {
-  padding-top: 20px;
+.little-container {
+  background-color: #dba181;
+  height: 100%;
 }
-.video-Left {
-  margin-top: -80px;
+.douyin-big {
+  width: 330px;
+  height: 100%;
 }
-.video-Left img {
+.douyin-big img {
+  width: 330px;
+  height: 100%;
+}
+.video-row {
+  display: flex;
+}
+.list-inline {
+  margin-bottom: 0;
+}
+.douyin-title {
+  padding: 10px;
+  text-align: left;
+  font-weight: bolder;
+  margin-bottom: 3%;
+  color: #864929;
+  background-color: #f7cab0;
+}
+.douyin-right {
   width: 100%;
-  max-height: 450px;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
-.video-Right {
-  text-align: center;
+.douyin-women {
+  width: 100%;
+  height: 100%;
 }
-.video-Right img {
-  max-width: 200px;
-  max-height: 200px;
-}
-.video-Left-img img {
+.douyin-women .douyin-list {
+  width: 30%;
+  padding: 0;
+  border-radius: 1%;
+  background-color: white;
+  float: left;
+  margin-left: 3%;
   position: relative;
 }
-.hidden-img-wrap {
+.mengban {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
-.video-title {
-  width: 60%;
-  height: 100px;
-  background-color: #ffd155;
-}
-.video-title span {
-  font-size: 24px;
-  color: white;
-  line-height: 60px;
-  font-weight: bolder;
-  margin-left: 30px;
-}
-.video-Left-img .hidden-img {
-  width: 120px;
-  height: 120px;
+.mengban img {
+  width: 70%;
+  height: 50%;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
   margin: auto;
+}
+.douyin-women .douyin-list h6 {
+  font-size: 18px;
+  font-weight: bolder;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.douyin-women .douyin-list p {
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+.douyin-list .douyin-img {
+  width: 100%;
+}
+.douyin-list .douyin-img img {
+  width: 100%;
+  height: 80%;
+}
+.tb {
+  padding-bottom: 2%;
+}
+.tb .tb-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.tb-container .douyin-title {
+  color: white;
+  background-color: #ea5269;
+  margin-bottom: 1%;
+}
+.tb-container .douyin-title h3 {
+  font-weight: bolder;
+}
+.tb-container .douyin-title p {
+  margin-bottom: 0;
+}
+.tb-video ul li img {
+  width: 100%;
+  height: 100%;
 }
 .news {
   background-color: white;
@@ -263,7 +340,7 @@
   text-decoration: none;
 }
 .newsMain ul li a .title {
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   margin-bottom: 0;
 }
