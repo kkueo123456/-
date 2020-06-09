@@ -10,5 +10,17 @@
             }
         })
     })
+    // 滚动改变导航颜色
+    // $(window).scroll(function () {
+    //     if ($(window).scrollTop() > 48) {
+    //         $('.indexNav').css({
+    //             'background': 'rgba(0, 0, 0, 0.8)',
+    //         })
+    //         $('.navRight ul li a').css('color', 'white')
+    //     } else {
+    //         $('.indexNav').css('background', 'white')
+    //         $('.navRight ul li a').css('color', 'black')
 
+    //     }
+    // })
 })()

@@ -10,7 +10,7 @@
                 //循环添加轮播图
                 $('.carousel-inner').append(`<div class="carousel-item"  data-interval='3500'>
                  <a href="#"> <img src="${value.img}" class="d-block w-100"
-                    alt="...">
+                    alt="二手奢侈品回收">
                     </a> 
             </div>`)
                 // 循环添加轮播图下方圆点
@@ -26,28 +26,28 @@
     })
     //数字增加动画
     // 人数
-    let firstMan=100
-    let lastMan=167322
-    let ManTime=parseInt(lastMan/60)
-    var manTimer=setInterval(function(){
-        firstMan=firstMan+ManTime
-        if(firstMan>=lastMan){
-            firstMan=lastMan
+    let firstMan = 100
+    let lastMan = 167322
+    let ManTime = parseInt(lastMan / 60)
+    var manTimer = setInterval(function () {
+        firstMan = firstMan + ManTime
+        if (firstMan >= lastMan) {
+            firstMan = lastMan
             clearInterval(manTimer)
         }
-        $('.app-Right-Top .people').html(firstMan+'人')
-    },50)
+        $('.app-Right-Top .people').html(firstMan + '人')
+    }, 50)
     //金额 
     let moneyNum = 500
-    let moneyFinalNum=8625736
-    let moneyTime=parseInt(moneyFinalNum/60)
+    let moneyFinalNum = 8625736
+    let moneyTime = parseInt(moneyFinalNum / 60)
     var timer = setInterval(function () {
-          moneyNum=moneyNum+moneyTime
-          if(moneyNum>=moneyFinalNum){
-              moneyNum=moneyFinalNum
-              clearInterval(timer)
-          }
-          $('.app-Right-Top .num').html(moneyNum+'元')
+        moneyNum = moneyNum + moneyTime
+        if (moneyNum >= moneyFinalNum) {
+            moneyNum = moneyFinalNum
+            clearInterval(timer)
+        }
+        $('.app-Right-Top .num').html(moneyNum + '元')
     }, 50)
     //直播蒙版
     $('.douyin-women ul li').hover(function () {
@@ -56,6 +56,24 @@
         $(this).children(".mengban").css('display', 'none')
 
     })
+    //跳转文章
+    $.ajax({
+        'url': 'json/title.json',
+        'type': 'get',
+        'success': function (data) {
+            $(data).each(function (index, value) {
+                $('.news-ul .row').append(`<li class="col-lg-6 col-md-6 col-12">
+              <div class="time"><div class="timeTop">${value.time}</div><div class="timeBottom"></div></div><div class="neiRong"><p class="title">${value.title}</p></div></li>`)
+            })
+        }
+    })
+    $('.news-ul').on('click', 'li', function () {
+        sessionStorage.setItem('index',$(this).index())
+        $(location).attr('href', '../page.html');
+    })
+
+
+    // $('.neiRong .title')
     /*移动广告*/
     // $(".brandUl li").hover(function () {
     //     $(this).find("img").animate({

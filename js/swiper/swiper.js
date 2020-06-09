@@ -1,8 +1,8 @@
 (function () {
     $(document).ready(function () {
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 2,
+            spaceBetween: 10,
             centeredSlides: true,
             loop: true,
             //自动播放

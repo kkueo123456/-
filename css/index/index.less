@@ -32,8 +32,9 @@
     }
 
     // 底部品牌图
-    .brand-container ul li {
+    .brand .brand-container ul li {
         margin-left: 0 !important;
+        height: 68px;
     }
 
     //直播的媒体查询
@@ -64,6 +65,11 @@
     .tb .tb-video ul li {
         padding-right: 0;
         padding-left: 0;
+    }
+
+    // 时尚资讯
+    .newsMain ul li p {
+        font-size: 1rem;
     }
 
 }
@@ -105,7 +111,7 @@
 
 .swiper-banner .carousel-inner .carousel-item img {
     height: 100%;
-    max-height: 605px;
+    max-height: 580px;
 }
 
 //轮播图左右按钮样式
@@ -127,7 +133,20 @@
 
 // 鉴定左侧
 .appraisal-Left-Top {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+
+    .more {
+        a {
+            font-size: 12px;
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+//文章的标题
+.news-container .appraisal-Left-Top {
+    display: flex;
+    justify-content: space-between;
 }
 
 .appraisal-Left-Top .display-4 {
@@ -169,7 +188,7 @@
 }
 
 .appraisal-Right-Right {
-    padding-top: 20%;
+    padding-top: 10%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -183,10 +202,13 @@
 }
 
 .appraisal-Right .app-Right-Top p {
-    font-size: 14px;
+    font-size: 18px;
     color: #777676;
     margin-bottom: 0;
 }
+// .appraisal-Right .app-Right-Top .people{
+//     color: red;
+// }
 
 //寄卖
 .sell {
@@ -249,6 +271,10 @@
 .sell-container-Bottom .sell-container-Bottom-Left img {
     width: 100%;
     height: 100%;
+}
+
+.sell-container-Bottom-Right .huishou-pub {
+    padding-left: 4%;
 }
 
 //回收右侧
@@ -435,22 +461,25 @@
 .newsMain {
     padding-top: 10px;
     padding-bottom: 10px;
+    max-height: 200px;
+    overflow: hidden;
 }
 
 .newsMain ul li {
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid #bababa;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
-.newsMain ul li a .title:hover {
+.newsMain ul li p:hover {
     color: rgb(230, 196, 159);
 }
 
 .newsMain ul li a {
     text-decoration: none;
+    text-overflow: ellipsis;
+
 }
 
 .newsMain ul li a .title {
@@ -461,7 +490,16 @@
 
 .neiRong {
     margin-left: 20px;
+    overflow: hidden;
 }
+
+.neiRong p {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 //热门品牌
 .brand-container {
