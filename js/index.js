@@ -35,7 +35,7 @@
             firstMan = lastMan
             clearInterval(manTimer)
         }
-        $('.app-Right-Top .people').html(firstMan + '人')
+        $('.app-Right-Top .people .jumpNum').html(firstMan)
     }, 50)
     //金额 
     let moneyNum = 500
@@ -47,7 +47,7 @@
             moneyNum = moneyFinalNum
             clearInterval(timer)
         }
-        $('.app-Right-Top .num').html(moneyNum + '元')
+        $('.app-Right-Top .num .jumpNum').html(moneyNum)
     }, 50)
     //直播蒙版
     $('.douyin-women ul li').hover(function () {

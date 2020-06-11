@@ -47,3 +47,20 @@
 .pageMain .pageMain-container .pageMain-body ul li:hover {
   color: #e6c49f;
 }
+.pageMain .pageMain-container .pageMain-body .pagenum {
+  text-align: center;
+}
+.pageMain .pageMain-container .pageMain-body .pagenum span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #e6c49f;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pageMain .pageMain-container .pageMain-body .pagenum .active2 {
+  background-color: #e6c49f;
+  color: white;
+}
