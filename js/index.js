@@ -2,9 +2,9 @@
     //引入导航栏
     $(".indexNav").load('../nav.html')
     $.ajax({
-        'url': 'json/banner.json',
+        'url': './json/banner.json',
         'type': 'get',
-        // "dataType": "jsonp",
+        "dataType": "json",
         'success': function (data) {
             $(data).each(function (index, value) {
                 //循环添加轮播图
@@ -20,8 +20,6 @@
             $('.carousel-item').eq(0).addClass('active')
             // 第一个圆点添加的类名
             $('.carousel-indicators li').eq(0).addClass('active')
-
-
         }
     })
     //数字增加动画
@@ -60,6 +58,7 @@
     $.ajax({
         'url': 'json/title.json',
         'type': 'get',
+        "dataType": "json",
         'success': function (data) {
             $(data).each(function (index, value) {
                 $('.news-ul .row').append(`<li class="col-lg-6 col-md-6 col-12">

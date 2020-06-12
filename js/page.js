@@ -5,6 +5,7 @@
     $.ajax({
         'url': 'json/page.json',
         'type': 'get',
+        "dataType": "json",
         'success': function (data) {
             let get = sessionStorage.getItem("index")
             console.log(get)
@@ -51,6 +52,7 @@
         $.ajax({
             'url': 'json/page.json',
             'type': 'get',
+            "dataType": "json",
             "success": function (data) {
                 $(data).each(function (index, value) {
                     $('.page-main').html(value.data1[Pindex].main1)

@@ -6,6 +6,7 @@
     $.ajax({
         url: "json/page.json",
         type: "get",
+        "dataType": "json",
         success: function (data) {
             let listData = data.data1
             let page = 1
