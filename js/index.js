@@ -40,6 +40,7 @@
     let moneyFinalNum = 8625736
     let moneyTime = parseInt(moneyFinalNum / 60)
     var timer = setInterval(function () {
+
         moneyNum = moneyNum + moneyTime
         if (moneyNum >= moneyFinalNum) {
             moneyNum = moneyFinalNum
@@ -67,7 +68,9 @@
         }
     })
     $('.news-ul').on('click', 'li', function () {
-        sessionStorage.setItem('index',$(this).index())
+        sessionStorage.setItem('index', $(this).index())
+        // sessionStorage.setItem('index', $(this).index() + 1)
+
         $(location).attr('href', '../page.html');
     })
 

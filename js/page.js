@@ -2,20 +2,26 @@
     //引入导航栏
     $(".indexNav").load('../nav.html')
     $(".footer").load('../footer.html')
+    // let get = sessionStorage.getItem("index")
     $.ajax({
+        // 'url': 'http://192.168.0.7:8001/html/ArticleDetails',
         'url': 'json/page.json',
         'type': 'get',
-        "dataType": "json",
+        'dataType': 'json',
+        // data: {
+        //     id: get
+        // },
         'success': function (data) {
+
             let get = sessionStorage.getItem("index")
-            console.log(get)
+            if (get) {
+                $('.page-main').html(data.data1[get].main1)
+            }else{
+                $('.page-main').html('<h4 style="color:red;margin-top:20px;margin-bottom:5%">请从右侧选择文章</h4>')
+            }
+            // $('.page-main').html(data.Data[0].ContentText)
+        },
 
-            $(data).each(function (index, value) {
-                $('.page-main').html(value.data1[get].main1)
-            })
-
-
-        }
     })
     //右侧导航滚动效果
     let chu = $('.right-list').offset().top
@@ -61,6 +67,6 @@
             }
         })
     })
-
+    console.log($('title').html())
 
 })()
