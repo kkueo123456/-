@@ -9,7 +9,7 @@
             $(data).each(function (index, value) {
                 //循环添加轮播图
                 $('.carousel-inner').append(`<div class="carousel-item"  data-interval='3500'>
-                 <a href="#"> <img src="${value.img}" class="d-block w-100"
+                 <a> <img src="${value.img}" class="d-block w-100"
                     alt="二手奢侈品回收">
                     </a> 
             </div>`)
