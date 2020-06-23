@@ -5,8 +5,6 @@
             // console.log(window.location)
             if ($(this)[0].href == window.location) {
                 $(this).addClass('active').siblings().removeClass("active")
-                console.log($(this))
-
             }
         })
     })
