@@ -1,4 +1,47 @@
 (function () {
+    //针对ie11以下内核的弹框
+    console.log(navigator.userAgent)
+    function myBrowser() {
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 ) {
+            //判断是否IE6-9
+            if (userAgent.indexOf("MSIE 6.0") > -1) {
+                return "IE6";
+            }
+            if (userAgent.indexOf("MSIE 7.0") > -1) {
+                return "IE7";
+            }
+            if (userAgent.indexOf("MSIE 8.0") > -1) {
+                return "IE8";
+            }
+            if (userAgent.indexOf("MSIE 9.0") > -1) {
+                return "IE9";
+            }
+            if (userAgent.indexOf("MSIE 10.0") > -1) {
+                return "IE10";
+            }
+            return "IE";
+        } 
+        if (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1) {
+            //判断是否IE10-11
+            if (userAgent.indexOf("rv:10.0") > -1) {
+                return "IE10";
+            }
+            if (userAgent.indexOf("rv:11.0") > -1) {
+                return "IE11";
+            }
+            return "IE11";
+        } 
+        else {
+            return userAgent;
+        }
+    }
+    var mb = myBrowser();
+    if (mb.indexOf("IE") > -1) {
+        if (mb.replace("IE", "") <= 11) {
+            alert("您的浏览器内核为Trident，请更换为谷歌浏览器或使用360极速浏览器的极速模式");
+        }
+    }
     //引入导航栏
     $(".indexNav").load('../nav.html')
     $.ajax({
@@ -8,13 +51,9 @@
         'success': function (data) {
             $(data).each(function (index, value) {
                 //循环添加轮播图
-                $('.carousel-inner').append(`<div class="carousel-item"  data-interval='3500'>
-                 <a> <img src="${value.img}" class="d-block w-100"
-                    alt="二手奢侈品回收">
-                    </a> 
-            </div>`)
+                $('.carousel-inner').append("<div class='carousel-item' data-interval='3500'><a><img src=" + value.img + " class='d-block w-100' alt='二手奢侈品回收'></a></div>")
                 // 循环添加轮播图下方圆点
-                $('.carousel-indicators').append(`<li data-target="#carouselExampleIndicators" data-slide-to="${index}"></li>`)
+                $('.carousel-indicators').append("<li data-target='#carouselExampleIndicators' data-slide-to=" + index + "></li>")
             })
             // 第一个轮播图添加的类名
             $('.carousel-item').eq(0).addClass('active')
@@ -24,9 +63,9 @@
     })
     //数字增加动画
     // 人数
-    let firstMan = 100
-    let lastMan = 167322
-    let ManTime = parseInt(lastMan / 60)
+    var firstMan = 100;
+    var lastMan = 167322;
+    var ManTime = parseInt(lastMan / 60)
     var manTimer = setInterval(function () {
         firstMan = firstMan + ManTime
         if (firstMan >= lastMan) {
@@ -36,11 +75,10 @@
         $('.app-Right-Top .people .jumpNum').html(firstMan)
     }, 50)
     //金额 
-    let moneyNum = 500
-    let moneyFinalNum = 8625736
-    let moneyTime = parseInt(moneyFinalNum / 60)
+    var moneyNum = 500;
+    var moneyFinalNum = 8625736;
+    var moneyTime = parseInt(moneyFinalNum / 60)
     var timer = setInterval(function () {
-
         moneyNum = moneyNum + moneyTime
         if (moneyNum >= moneyFinalNum) {
             moneyNum = moneyFinalNum
@@ -62,8 +100,7 @@
         "dataType": "json",
         'success': function (data) {
             $(data).each(function (index, value) {
-                $('.news-ul .row').append(`<li class="col-lg-6 col-md-6 col-12">
-              <div class="time"><div class="timeTop">${value.time}</div><div class="timeBottom"></div></div><div class="neiRong"><p class="title">${value.title}</p></div></li>`)
+                $('.news-ul .row').append("<li class='col-lg-6 col-md-6 col-12'><div class='time'><div class='timeTop'>" + value.time + "</div><div class='timeBottom'></div></div><div class='neiRong'><p class='title'>" + value.title + "</p></div></li>")
             })
         }
     })

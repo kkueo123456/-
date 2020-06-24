@@ -9,16 +9,20 @@
         })
     })
     // 滚动改变导航颜色
-    // $(window).scroll(function () {
-    //     if ($(window).scrollTop() > 48) {
-    //         $('.indexNav').css({
-    //             'background': 'rgba(0, 0, 0, 0.8)',
-    //         })
-    //         $('.navRight ul li a').css('color', 'white')
-    //     } else {
-    //         $('.indexNav').css('background', 'white')
-    //         $('.navRight ul li a').css('color', 'black')
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 48) {
+            $('.indexNav').css({
+                'background': 'rgba(0, 0, 0, 0.8)',
+                'border':'none'
+            })
+            $('.navLeft .navLeft-logo').css('color', 'white')
+            $('.navRight ul li a').css('color', 'white')
 
-    //     }
-    // })
+        } else {
+            $('.indexNav').css('background', '#f5f5f5')
+            $('.navLeft .navLeft-logo').css('color', 'black')
+            $('.navRight ul li a').css('color', 'black')
+
+        }
+    })
 })()

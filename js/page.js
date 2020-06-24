@@ -16,7 +16,7 @@
             let get = sessionStorage.getItem("index")
             if (get) {
                 $('.page-main').html(data.data1[get].main1)
-            }else{
+            } else {
                 $('.page-main').html('<h4 style="color:red;margin-top:20px;margin-bottom:5%">请从右侧选择文章</h4>')
             }
             // $('.page-main').html(data.Data[0].ContentText)
@@ -45,6 +45,7 @@
     //右侧导航内容
     $.ajax({
         'url': 'json/title.json',
+        "dataType": "json",
         success: function (data) {
             $(data).each(function (index, value) {
                 $('.right-list ul').append(`<li><div>${value.title}</div>

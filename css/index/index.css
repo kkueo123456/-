@@ -390,15 +390,15 @@
   padding-bottom: 5%;
 }
 .brand-container ul {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 .brand-container ul li {
   width: 140px;
   height: 80px;
   margin-bottom: 10px;
-  border: 1px solid #efefef;
+  border: 1px solid white;
   float: left;
-  margin-left: 30px;
+  margin-left: 35px;
   overflow: hidden;
 }
 .brand-container ul li img {
