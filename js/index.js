@@ -1,47 +1,5 @@
 (function () {
-    //针对ie11以下内核的弹框
-    console.log(navigator.userAgent)
-    function myBrowser() {
-        var userAgent = navigator.userAgent;
-        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 ) {
-            //判断是否IE6-9
-            if (userAgent.indexOf("MSIE 6.0") > -1) {
-                return "IE6";
-            }
-            if (userAgent.indexOf("MSIE 7.0") > -1) {
-                return "IE7";
-            }
-            if (userAgent.indexOf("MSIE 8.0") > -1) {
-                return "IE8";
-            }
-            if (userAgent.indexOf("MSIE 9.0") > -1) {
-                return "IE9";
-            }
-            if (userAgent.indexOf("MSIE 10.0") > -1) {
-                return "IE10";
-            }
-            return "IE";
-        } 
-        if (userAgent.toLowerCase().indexOf("trident") > -1 && userAgent.indexOf("rv") > -1) {
-            //判断是否IE10-11
-            if (userAgent.indexOf("rv:10.0") > -1) {
-                return "IE10";
-            }
-            if (userAgent.indexOf("rv:11.0") > -1) {
-                return "IE11";
-            }
-            return "IE11";
-        } 
-        else {
-            return userAgent;
-        }
-    }
-    var mb = myBrowser();
-    if (mb.indexOf("IE") > -1) {
-        if (mb.replace("IE", "") <= 11) {
-            alert("您的浏览器内核为Trident，请更换为谷歌浏览器或使用360极速浏览器的极速模式");
-        }
-    }
+    
     //引入导航栏
     $(".indexNav").load('../nav.html')
     $.ajax({
@@ -110,8 +68,6 @@
 
         $(location).attr('href', '../page.html');
     })
-
-
     // $('.neiRong .title')
     /*移动广告*/
     // $(".brandUl li").hover(function () {

@@ -245,10 +245,6 @@
   background-color: #dba181;
   height: 100%;
 }
-.douyin-big {
-  width: 330px;
-  height: 100%;
-}
 .douyin-big img {
   width: 330px;
   height: 100%;
@@ -268,12 +264,10 @@
   background-color: #f7cab0;
 }
 .douyin-right {
-  width: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
 }
 .douyin-women {
-  width: 100%;
   height: 100%;
 }
 .douyin-women .douyin-list {

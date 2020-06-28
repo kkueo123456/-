@@ -86,7 +86,7 @@
   margin: 0 auto;
 }
 .advHover:nth-child(1) a span:hover {
-  color: #ffda44;
+  color: #fce710;
 }
 .advHover:nth-child(2) a span:hover {
   color: #27efea;
@@ -99,6 +99,7 @@
   font-size: 15px;
 }
 .address .row {
+  width: 100%;
   margin: 0 auto;
 }
 .address .phone-add {
