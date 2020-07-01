@@ -1,5 +1,9 @@
 @import (reference) "../base.less";
-
+@media screen and (max-width: 768px){
+    .page-container p{
+        text-align: left !important;
+    }
+}
 html,
 body {}
 
@@ -21,8 +25,25 @@ body {}
         }
     }
 
+    .container-left {
+        .pageTit {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+
+            h4 {
+                font-weight: bolder;
+            }
+        }
+        .siblings{
+            padding-left: 15px;
+        }
+    }
 
     .page-main {
+        margin-bottom: 2%;
+        min-height: 300px;
         p {
             line-height: 30px;
 
@@ -76,9 +97,10 @@ body {}
 
                 h6 {
                     font-weight: bolder;
-                    
+
                 }
-                a{
+
+                a {
                     font-size: 12px;
                     color: black;
                 }
@@ -94,7 +116,8 @@ body {}
                         overflow: hidden;
                         cursor: pointer;
                     }
-                    div:hover{
+
+                    div:hover {
                         color: rgb(230, 196, 159);
                     }
 

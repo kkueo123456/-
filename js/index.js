@@ -1,5 +1,5 @@
 (function () {
-    
+
     //引入导航栏
     $(".indexNav").load('../nav.html')
     $.ajax({
@@ -53,19 +53,22 @@
     })
     //跳转文章
     $.ajax({
-        'url': 'json/title.json',
+        'url': 'http://192.168.0.249:8001/html/ActicleList',
         'type': 'get',
         "dataType": "json",
         'success': function (data) {
-            $(data).each(function (index, value) {
-                $('.news-ul .row').append("<li class='col-lg-6 col-md-6 col-12'><div class='time'><div class='timeTop'>" + value.time + "</div><div class='timeBottom'></div></div><div class='neiRong'><p class='title'>" + value.title + "</p></div></li>")
+            var listData = data.Data[0].List
+            console.log(listData)
+            $(listData).each(function (index, value) {
+                $('.news-ul .row').append("<li class='col-lg-6 col-md-6 col-12'><div class='time'><div class='timeTop'>" + value.time + "</div><div class='timeBottom'></div></div><div class='neiRong'><p class='title'>" + value.Title + "</p></div></li>")
+            })
+            $('.news-ul').on('click', 'li', function () {
+                var index = $(this).index()
+                $(location).attr('href', '../page.html?id=' + listData[index].Id);
             })
         }
     })
     $('.news-ul').on('click', 'li', function () {
-        sessionStorage.setItem('index', $(this).index())
-        // sessionStorage.setItem('index', $(this).index() + 1)
-
         $(location).attr('href', '../page.html');
     })
     // $('.neiRong .title')

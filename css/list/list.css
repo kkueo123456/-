@@ -1,0 +1,85 @@
+.about-banner {
+  margin-top: 48px;
+  margin-bottom: 30px;
+}
+.about-banner .about-container {
+  padding: 0;
+}
+.about-banner img {
+  width: 100%;
+  height: 100%;
+  max-height: 580px;
+}
+.about-show-container-Top {
+  text-align: center;
+}
+.about-show-container {
+  padding-top: 4%;
+  padding-bottom: 20px;
+}
+.about-show-container-Top .title h3 {
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 2%;
+}
+.about-show-container-Top .title h3 span {
+  color: red;
+  letter-spacing: 10px;
+}
+.about-show-container-Top p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 3%;
+}
+.main {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+.main .main-top .main-top-left img {
+  width: 100%;
+  height: 100%;
+}
+.main .main-top .main-top-left .top-left-left {
+  margin-bottom: 20px;
+  position: relative;
+}
+.main .main-top .main-top-left .top-left-left .mb-wrap {
+  position: relative;
+  height: 100%;
+}
+.main .main-top .main-top-left .top-left-left .mb-wrap .list-mengban {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+}
+.main .main-top .main-top-left .top-left-left .mb-wrap .list-mengban .list-mengban-zi {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.main .main-top .main-top-left .top-left-left .mb-wrap .list-mengban .list-mengban-zi p {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.main .bags-title {
+  margin-bottom: 20px;
+}
+.main .bags-title h3,
+.main .bags-title h5 {
+  text-align: center;
+  font-weight: bolder;
+  color: #760700;
+}
+.main .bags .bags-big-img img {
+  width: 100%;
+  max-height: 780px;
+}
