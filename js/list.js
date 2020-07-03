@@ -19,26 +19,18 @@
         "iPad", "iPod"
     ];
 
-    $('.cs').click(function () {
-        // for (let i = 0; i < Agents.length; i++) {
-        //     console.log(user.indexOf(Agents[i]))
-        //     if (user.indexOf(Agents[i]) > 0) {
-        //         $(location).attr('href', 'http://www.baidu.com')
-        //     } else {
-        //         $(location).attr('href', 'http://www.taobao.com')
-        //     }
-        // }
-    
-        let a = Agents.map(function (value) {
+    $('.bags-list .bags-list-wrap').click(function () {
+        //判断是否存在手机标识
+        let phone = Agents.map(function (value) {
             return user.indexOf(value)
         })
-        let b = a.filter(function (value) {
+        let hasphone = phone.filter(function (value) {
             return value > 0
         })
-        if (b != ''){
-            $(location).attr('href', 'http://www.baidu.com')
+        if (hasphone != ''){
+            $(location).attr('href', 'taobao://m.tb.cn/h.VpzFyOI?sm=d1b674')
         }else{
-            $(location).attr('href', 'http://www.taobao.com')
+            $(location).attr('href', 'https://shop67625920.taobao.com/?spm=a230r.7195193.1997079397.13.3e103b12Mx4NP3','_blank')
         }
     })
 })()

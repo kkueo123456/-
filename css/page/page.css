@@ -80,18 +80,21 @@
   font-size: 12px;
   color: black;
 }
+.page-container .container-right .right-list ul li {
+  cursor: pointer;
+}
 .page-container .container-right .right-list ul li div {
   font-size: 16px;
   color: #50503f;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  cursor: pointer;
 }
 .page-container .container-right .right-list ul li div:hover {
   color: #e6c49f;
 }
 .page-container .container-right .right-list ul li .ago {
   font-size: 12px;
-  color: #ccc;
+  color: #a7a6a6;
+  margin-bottom: 0;
 }

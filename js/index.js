@@ -60,7 +60,7 @@
             var listData = data.Data[0].List
             console.log(listData)
             $(listData).each(function (index, value) {
-                $('.news-ul .row').append("<li class='col-lg-6 col-md-6 col-12'><div class='time'><div class='timeTop'>" + value.time + "</div><div class='timeBottom'></div></div><div class='neiRong'><p class='title'>" + value.Title + "</p></div></li>")
+                $('.news-ul .row').append("<li class='col-lg-6 col-md-6 col-12'><div class='time'><div class='timeTop'>" + value.ShowDateTime + "</div><div class='timeBottom'></div></div><div class='neiRong'><p class='title'>" + value.Title + "</p></div></li>")
             })
             $('.news-ul').on('click', 'li', function () {
                 var index = $(this).index()

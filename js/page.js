@@ -12,7 +12,6 @@
             id: id
         },
         'success': function (data) {
-            console.log(data)
             //设置时间
             let Time = data.Data[0].ShowDateTime
             let reg = /[^0-9]/ig //表示匹配^非 0-9的全部字符，全局不区分大小写
@@ -66,9 +65,19 @@
         dataType: "json",
         success: function (data) {
             var listData = data.Data[0].List
+            //当前时间转换成时间戳
+            var time = new Date().getTime()
+            //空的容器
             let str = ""
             $(listData).each(function (index, value) {
-                str += `<li><div>${value.Title}</div></li>`
+                // 将传来的时间转换成时间戳
+                var time2 = new Date(value.ShowDateTime).getTime()
+                var shengTime = parseInt((time - time2) / 1000)
+                //多少天前
+                var ago = parseInt(shengTime / 86400)
+                //列表数据
+                str += `<li><div>${value.Title}</div>
+                <p class="ago">${ago}天前</p></li>`
             })
             $('.right-list ul').append(str)
             $('.right-list ul').on('click', 'li', function () {

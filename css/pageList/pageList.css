@@ -34,6 +34,7 @@
   padding-bottom: 15px;
   border-bottom: 1px solid #f5f5f5;
   display: flex;
+  min-height: 150px;
 }
 .pageMain .pageMain-container .pageMain-body ul li h5 {
   white-space: nowrap;
@@ -52,6 +53,7 @@
 }
 .pageMain .pageMain-container .pageMain-body .pagenum {
   text-align: center;
+  margin-bottom: 30px;
 }
 .pageMain .pageMain-container .pageMain-body .pagenum input {
   width: 30px;
@@ -59,7 +61,7 @@
   padding-left: 2px;
   border: 1px solid #e6c49f;
   border-radius: 5px;
-  margin-left: 10px;
+  margin-left: 4px;
 }
 .pageMain .pageMain-container .pageMain-body .pagenum button {
   border: none;
@@ -79,7 +81,8 @@
   height: 30px;
   line-height: 30px;
   border: 1px solid #e6c49f;
-  margin-left: 10px;
+  margin-left: 4px;
+  margin-bottom: 4px;
   border-radius: 5px;
   cursor: pointer;
 }

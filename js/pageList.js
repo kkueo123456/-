@@ -6,7 +6,7 @@
     //文章主体分页功能
     changePage()
     changePageNum()
-
+    //分页按钮
     function changePageNum() {
         $.ajax({
             url: "http://192.168.0.249:8001/html/ActicleList",
@@ -14,13 +14,18 @@
             dataType: "json",
             success: function (data) {
                 //判断页码个数
-                var len = Math.ceil(data.Data[0].AllCountNum / 8) > 15 ? 15 : Math.ceil(data.Data[0].AllCountNum / 8)
+                var len = Math.ceil(data.Data[0].AllCountNum / 8) > 7 ? 7 : Math.ceil(data.Data[0].AllCountNum / 8)
+                if (page > len) {
+                    len = page
+                }
                 //形成分页栏
                 var str2 = ''
                 for (var i = page; i <= len; i++) {
                     str2 += `<span>${i}</span>`
                 }
                 $('.pagenum2').html(str2)
+                $('.pagenum b').html(`共${Math.ceil(data.Data[0].AllCountNum / 8)}页`)
+
                 // 首个页码增加样式
                 $('.pagenum2 span').eq(0).addClass('active2')
                 //页码点击时的操作 
@@ -34,7 +39,7 @@
             }
         })
     }
-
+    // 主体列表
     function changePage() {
         $.ajax({
             url: "http://192.168.0.249:8001/html/ActicleList",
@@ -47,7 +52,7 @@
                 var listData = data.Data[0].List
                 let str = ""
                 $(listData).each(function (index, value) {
-                    str += `<li><div class='pageMain-img col-4'><img src='${value.FirstImg}' alt='' class='img-responsive'></div><div class='pageMain-text col-8'><h5>${value.Title}</h5><div class='time'></div></div></li>`
+                    str += `<li><div class='pageMain-img col-4'><img src='${value.FirstImg}' alt='' class='img-responsive'></div><div class='pageMain-text col-8'><h5>${value.Title}</h5><div class='time'>${value.ShowDateTime}</div></div></li>`
                 })
                 $('.pageMain-body ul').html(str)
                 //点击跳转
@@ -63,6 +68,7 @@
             }
         })
     }
+    //跳页操作
     $('.pageMain-body .jumpStart').click(function () {
         page = $('.pageJump').val()
         changePage()
