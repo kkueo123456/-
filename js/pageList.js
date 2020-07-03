@@ -25,7 +25,6 @@
                 }
                 $('.pagenum2').html(str2)
                 $('.pagenum b').html(`共${Math.ceil(data.Data[0].AllCountNum / 8)}页`)
-
                 // 首个页码增加样式
                 $('.pagenum2 span').eq(0).addClass('active2')
                 //页码点击时的操作 

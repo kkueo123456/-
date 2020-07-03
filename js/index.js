@@ -23,7 +23,7 @@
     // 人数
     var firstMan = 100;
     var lastMan = 167322;
-    var ManTime = parseInt(lastMan / 60)
+    var ManTime = parseInt(lastMan / 80)
     var manTimer = setInterval(function () {
         firstMan = firstMan + ManTime
         if (firstMan >= lastMan) {
@@ -35,7 +35,7 @@
     //金额 
     var moneyNum = 500;
     var moneyFinalNum = 8625736;
-    var moneyTime = parseInt(moneyFinalNum / 60)
+    var moneyTime = parseInt(moneyFinalNum / 80)
     var timer = setInterval(function () {
         moneyNum = moneyNum + moneyTime
         if (moneyNum >= moneyFinalNum) {
