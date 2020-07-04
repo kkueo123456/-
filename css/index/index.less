@@ -217,7 +217,7 @@
 
 .appraisal-Right .app-Right-Top p {
     font-size: 18px;
-    color: #b3b3b3;
+    color: #666666;
     margin-bottom: 0;
 }
 
@@ -331,10 +331,16 @@
 }
 
 .little-container {
-    background-color: rgb(219, 161, 129);
     height: 100%;
 }
-
+.video .little-container{
+    padding-right: 0;
+    padding-left: 0;
+}
+.little-container .row{
+    width: 100%;
+    margin: 0;
+}
 .douyin-big {
     // width: 330px;
     // height: 100%;
@@ -347,6 +353,7 @@
 
 .video-row {
     display: flex;
+    width: 100%;
 }
 
 //抖音右侧
@@ -355,7 +362,8 @@
 }
 
 .douyin-title {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: left;
     font-weight: bolder;
     margin-bottom: 3%;
@@ -364,9 +372,12 @@
 }
 
 .douyin-right {
-    // width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    width: 100%;
+    background-color: rgb(219, 161, 129);
+    
+
+    // padding-top: 3%;
+    // padding-bottom: 3%;
 }
 
 .douyin-women {

@@ -157,7 +157,7 @@
 }
 .appraisal-Right .app-Right-Top p {
   font-size: 18px;
-  color: #b3b3b3;
+  color: #666666;
   margin-bottom: 0;
 }
 .sell {
@@ -242,8 +242,15 @@
   background-color: #f5c7af;
 }
 .little-container {
-  background-color: #dba181;
   height: 100%;
+}
+.video .little-container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.little-container .row {
+  width: 100%;
+  margin: 0;
 }
 .douyin-big img {
   width: 330px;
@@ -251,12 +258,14 @@
 }
 .video-row {
   display: flex;
+  width: 100%;
 }
 .list-inline {
   margin-bottom: 0;
 }
 .douyin-title {
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: left;
   font-weight: bolder;
   margin-bottom: 3%;
@@ -264,8 +273,8 @@
   background-color: #f7cab0;
 }
 .douyin-right {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  width: 100%;
+  background-color: #dba181;
 }
 .douyin-women {
   height: 100%;
