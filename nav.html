@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/base/bootstrap.min.css">
     <style>
         .nav {
-            padding-top: 10px;
+            /* padding-top: 10px; */
             padding-left: 5px;
             padding-right: 5px;
             box-sizing: border-box;
@@ -16,7 +16,47 @@
             width: 100%;
         }
 
-        .navRight ul {
+        .nav .bg-light {
+            background: none !important;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 10px 0 0 0 !important;
+
+        }
+
+        .nav .navbar .navbar-collapse {
+            justify-content: space-between;
+        }
+
+        .nav .navbar .collapse ul li a {
+            color: #ccc;
+            font-size: 12px;
+        }
+
+        .nav .navbar .collapse ul li a:hover {
+            color: white;
+        }
+
+        .nav .navbar .collapse ul li {
+            margin-left: 1.5rem;
+        }
+
+        .navbar-light .navbar-toggler {
+            color: white !important;
+        }
+
+        .navbar button {
+            height: 42px;
+        }
+
+        .navbar button span {
+            color: white;
+        }
+
+        /* .navRight ul {
             display: flex;
         }
 
@@ -29,7 +69,7 @@
 
         .navRight ul li a:hover {
             color: white;
-        }
+        } */
 
         .active {
             color: white !important;
@@ -40,23 +80,27 @@
             height: 65%;
         }
 
-        @media screen and (min-width:1000px) {
-            .navRight ul li a {
-                margin-left: 30px;
-            }
-
-        }
 
         @media screen and (max-width:768px) {
             .nav .container {
-                padding-right: 5px;
+                padding-right: 0;
             }
-        }
 
-        @media screen and (max-width:320px) {
-            .navLeft .navLeft-logo {
-                display: none !important;
+            .nav .navbar-nav {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding-left: 15px;
             }
+
+            .navbar {
+                padding: 5px 0 0 0 !important;
+
+            }
+
+            .nav .navbar .collapse ul li {
+                margin-left: 0rem;
+                margin-bottom: 4px;
+            }
+
         }
     </style>
 </head>
@@ -67,7 +111,7 @@
     <div class="container-fluid nav ">
         <div class="container">
             <div class="row">
-                <div class="d-flex justify-content-between">
+                <!-- <div class="d-flex justify-content-between">
                     <div class="navLeft"><img
                             src="/img/index/Logo.png" alt="" class="col-md-11 col-lg-11 d-none d-md-block"></div>
                     <div class="navRight float-right">
@@ -79,7 +123,36 @@
                             <li><a href="about.html" title="关于我们">关于我们</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
+
+                <nav class="navbar navbar-expand-lg">
+                    <div class="navLeft"><img src="/img/index/Logo.png" alt="" class="col-md-11 col-lg-11 "></div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="glyphicon glyphicon-tasks">〓</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div></div>
+                        <ul class="navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a href="index.html" title="首页">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="appraisal.html" title="权威鉴定">权威鉴定</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="sell.html" title="回收寄卖">回收寄卖</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="list.html" title="商品展示">商品展示</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.html" title="关于我们">关于我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
             </div>
         </div>
 
